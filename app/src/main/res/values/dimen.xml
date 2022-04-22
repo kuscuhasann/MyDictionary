@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="five_point">5dp</dimen>
+    <dimen name="eight_point">8dp</dimen>
+    <dimen name="fourteen_point">14dp</dimen>
+    <dimen name="sixteen_point">16dp</dimen>
+    <dimen name="twenty_one_point">21dp</dimen>
+    <dimen name="twenty_five_point">25dp</dimen>
+    <dimen name="two_hundred_fifty_point">250dp</dimen>
+</resources>

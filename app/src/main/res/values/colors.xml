@@ -7,4 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    // Project Colors
+    <color name="my_dictionary_purple">#1B2DCD</color>
+    <color name="my_dictionary_lilac">#A383CD</color>
+    <color name="my_dictionary_blue">#260797FF</color>
+    <color name="my_dictionary_light_blue">#1A0797FF</color>
 </resources>

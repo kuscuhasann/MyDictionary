@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewBackGround"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/eight_point"
+        android:layout_marginEnd="@dimen/eight_point"
+        android:layout_marginBottom="@dimen/fourteen_point"
+        android:src="@drawable/reycler_item_bg"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/imageViewRightArrow"
+        android:layout_width="@dimen/twenty_five_point"
+        android:layout_height="@dimen/twenty_five_point"
+        android:layout_marginStart="@dimen/twenty_five_point"
+        android:src="@drawable/ic_right_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewBackGround"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/textViewKeyValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:text="Lemon-Limon"
+        app:layout_constraintBottom_toBottomOf="@+id/imageViewBackGround"
+        app:layout_constraintStart_toEndOf="@+id/imageViewRightArrow"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="@dimen/eight_point"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

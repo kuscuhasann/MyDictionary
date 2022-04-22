@@ -2,4 +2,7 @@
     <string name="app_name">MyDictionary</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="no_word_found">Henüz kelime eklemediniz, haydi başlayalım.</string>
+    <string name="primary_key">Birinci kelimeyi giriniz</string>
+    <string name="secondary_value">İkinci kelimeyi giriniz</string>
 </resources>
