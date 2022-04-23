@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -23,8 +24,8 @@
             android:id="@+id/appCompatButtonAddWord"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/five_point"
-            android:layout_marginBottom="@dimen/sixteen_point"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="20dp"
             android:background="@drawable/button_word_add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -36,7 +37,12 @@
             android:layout_marginStart="@dimen/eight_point"
             android:layout_marginBottom="@dimen/twenty_one_point"
             android:background="@drawable/edt_background"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
             android:hint="@string/secondary_value"
+            android:textSize="@dimen/nineteen_text_size"
+            android:fontFamily="@font/verdana_font"
+            android:textColor="@color/text_size_black"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/appCompatButtonAddWord"
             app:layout_constraintStart_toStartOf="parent" />
@@ -47,10 +53,15 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/eight_point"
             android:background="@drawable/edt_background"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
             android:enabled="true"
             android:focusable="true"
             android:focusableInTouchMode="true"
             android:hint="@string/primary_key"
+            android:textSize="@dimen/nineteen_text_size"
+            android:fontFamily="@font/verdana_font"
+            android:textColor="@color/text_size_black"
             app:layout_constraintBottom_toTopOf="@+id/editTextValue"
             app:layout_constraintEnd_toEndOf="@+id/editTextValue"
             app:layout_constraintStart_toStartOf="@+id/editTextValue" />

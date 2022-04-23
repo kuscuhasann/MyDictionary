@@ -8,9 +8,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
-    // Project Colors
+    <!-- Project Color -->
     <color name="my_dictionary_purple">#1B2DCD</color>
     <color name="my_dictionary_lilac">#A383CD</color>
     <color name="my_dictionary_blue">#260797FF</color>
     <color name="my_dictionary_light_blue">#1A0797FF</color>
+
+    <!-- Font Colors -->
+    <color name="text_size_black">#000000</color>
 </resources>

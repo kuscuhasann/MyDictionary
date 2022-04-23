@@ -7,4 +7,8 @@
     <dimen name="twenty_one_point">21dp</dimen>
     <dimen name="twenty_five_point">25dp</dimen>
     <dimen name="two_hundred_fifty_point">250dp</dimen>
+
+    <!-- Text Size -->
+    <dimen name="twenty_three_text_size">23sp</dimen>
+    <dimen name="nineteen_text_size">19sp</dimen>
 </resources>

@@ -18,7 +18,7 @@ class MyDictionaryFragment : BaseFragment<MyDictionaryViewModel, FragmentMyDicti
 
 
     override fun layoutActions() {
-        // some actions
+        dataBinding.editTextKey.requestFocus()
     }
 
     override fun dependecyInversion() {
