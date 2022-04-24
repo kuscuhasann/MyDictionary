@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
@@ -11,21 +10,44 @@
         android:background="@color/my_dictionary_light_blue"
         tools:context=".ui.view.MyDictionaryFragment">
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonExit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:background="@android:drawable/ic_delete"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMyDictionaryWords"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_point"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/editTextKey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonExit" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/verdana_font"
             android:text="@string/no_word_found"
+            android:textSize="@dimen/twenty_one_text_size"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"/>
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/appCompatButtonAddWord"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="8dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginEnd="@dimen/eight_point"
+            android:layout_marginBottom="@dimen/twenty_point"
             android:background="@drawable/button_word_add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
@@ -37,12 +59,13 @@
             android:layout_marginStart="@dimen/eight_point"
             android:layout_marginBottom="@dimen/twenty_one_point"
             android:background="@drawable/edt_background"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            android:hint="@string/secondary_value"
-            android:textSize="@dimen/nineteen_text_size"
             android:fontFamily="@font/verdana_font"
+            android:hint="@string/secondary_value"
+            android:paddingStart="@dimen/fifteen_point"
+            android:paddingEnd="@dimen/fifteen_point"
+            android:paddingBottom="@dimen/five_point"
             android:textColor="@color/text_size_black"
+            android:textSize="@dimen/nineteen_text_size"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/appCompatButtonAddWord"
             app:layout_constraintStart_toStartOf="parent" />
@@ -53,15 +76,13 @@
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/eight_point"
             android:background="@drawable/edt_background"
-            android:paddingStart="15dp"
-            android:paddingEnd="15dp"
-            android:enabled="true"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
-            android:hint="@string/primary_key"
-            android:textSize="@dimen/nineteen_text_size"
             android:fontFamily="@font/verdana_font"
+            android:hint="@string/primary_key"
+            android:paddingStart="@dimen/fifteen_point"
+            android:paddingEnd="@dimen/fifteen_point"
+            android:paddingBottom="@dimen/five_point"
             android:textColor="@color/text_size_black"
+            android:textSize="@dimen/nineteen_text_size"
             app:layout_constraintBottom_toTopOf="@+id/editTextValue"
             app:layout_constraintEnd_toEndOf="@+id/editTextValue"
             app:layout_constraintStart_toStartOf="@+id/editTextValue" />
