@@ -5,4 +5,5 @@
     <string name="no_word_found">Henüz kelime yok, haydi başla.</string>
     <string name="primary_key">Kelimeyi girin</string>
     <string name="secondary_value">Çevirisini girin</string>
+    <string name="dark_mode_text">Dark Mode</string>
 </resources>

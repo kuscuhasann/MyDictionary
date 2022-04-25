@@ -1,5 +1,10 @@
 package com.pakt_games.mydictionary.ui.view
 
+import android.app.Activity
+import android.content.res.Resources
+import android.content.res.Resources.Theme
+import android.widget.CompoundButton
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.lifecycle.lifecycleScope
 import com.pakt_games.mydictionary.R
 import com.pakt_games.mydictionary.base.BaseFragment
@@ -12,8 +17,9 @@ import com.pakt_games.mydictionary.ui.recyclerviewitems.MyDictionaryAdapter
 import com.pakt_games.mydictionary.ui.viewmodel.MyDictionaryViewModel
 import com.pakt_games.mydictionary.util.showToast
 import org.koin.android.ext.koin.androidContext
-import org.koin.core.context.startKoin
 import org.koin.androidx.viewmodel.ext.android.viewModel
+import org.koin.core.context.startKoin
+import org.koin.core.context.stopKoin
 
 
 class MyDictionaryFragment : BaseFragment<MyDictionaryViewModel, FragmentMyDictionaryBinding>() {
@@ -27,6 +33,27 @@ class MyDictionaryFragment : BaseFragment<MyDictionaryViewModel, FragmentMyDicti
         dbEvents()
         closeProject()
         bindRecyclerViewAndDatabase()
+
+        when (AppCompatDelegate.MODE_NIGHT_YES) {
+            AppCompatDelegate.getDefaultNightMode() -> {
+                requireActivity().setTheme(R.style.Theme_Dark)
+            }
+            else -> {
+                requireActivity().setTheme(R.style.Theme_Light)
+            }
+        }
+
+        dataBinding.switchDarkMode.setOnCheckedChangeListener(CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
+            when {
+                isChecked -> {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES)
+                    stopKoin()
+                }
+                else -> {
+                    AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+                }
+            }
+        })
     }
 
     private fun bindRecyclerViewAndDatabase() {
