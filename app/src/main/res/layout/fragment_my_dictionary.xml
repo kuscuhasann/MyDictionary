@@ -10,25 +10,6 @@
         android:background="@color/my_dictionary_light_blue"
         tools:context=".ui.view.MyDictionaryFragment">
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/buttonExit"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@android:drawable/ic_delete"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/recyclerViewMyDictionaryWords"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/zero_point"
-            android:orientation="vertical"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintBottom_toTopOf="@+id/editTextKey"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/buttonExit" />
-
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
@@ -36,11 +17,21 @@
             android:fontFamily="@font/verdana_font"
             android:text="@string/no_word_found"
             android:textSize="@dimen/twenty_one_text_size"
+            android:visibility="gone"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:visibility="gone"/>
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonExit"
+            android:layout_width="@dimen/fifty_five_point"
+            android:layout_height="@dimen/fifty_five_point"
+            android:layout_marginTop="@dimen/eleven_point"
+            android:layout_marginEnd="@dimen/twenty_one_point"
+            android:background="@drawable/button_exit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/appCompatButtonAddWord"
@@ -86,6 +77,19 @@
             app:layout_constraintBottom_toTopOf="@+id/editTextValue"
             app:layout_constraintEnd_toEndOf="@+id/editTextValue"
             app:layout_constraintStart_toStartOf="@+id/editTextValue" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewMyDictionaryWords"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/zero_point"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/eight_point"
+            android:layout_marginBottom="@dimen/eight_point"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/editTextKey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/buttonExit" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

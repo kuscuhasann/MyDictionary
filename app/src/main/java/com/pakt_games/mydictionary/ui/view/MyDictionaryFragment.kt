@@ -33,7 +33,9 @@ class MyDictionaryFragment : BaseFragment<MyDictionaryViewModel, FragmentMyDicti
         viewModel.getWordsDataInSQL()
         viewModel.readAllDataDB.observe(this) {
             dataBinding.recyclerViewMyDictionaryWords.adapter = MyDictionaryAdapter(it)
-            dataBinding.executePendingBindings()
+            with(dataBinding) {
+                executePendingBindings()
+            }
         }
 
     }
@@ -48,6 +50,7 @@ class MyDictionaryFragment : BaseFragment<MyDictionaryViewModel, FragmentMyDicti
         lifecycleScope.launchWhenCreated {
             dataBinding.appCompatButtonAddWord.setOnClickListener {
                 addWordsToDb()
+                bindRecyclerViewAndDatabase()
             }
         }
     }

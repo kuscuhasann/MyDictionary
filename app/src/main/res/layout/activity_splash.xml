@@ -8,17 +8,18 @@
     android:background="@color/my_dictionary_blue"
     tools:context=".SplashActivity">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="251dp"
-        android:layout_height="218dp"
-        android:src="@drawable/my_dictionary_name"
-        app:layout_constraintBottom_toTopOf="@+id/imageViewMainLogo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageViewMainLogo" />
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/imageViewMainLogo"
+        android:layout_width="@dimen/two_hundred_fifty_one_point"
+        android:layout_height="@dimen/two_hundred_eighteen_point"
+        android:src="@drawable/my_dictionary_name"
+        app:layout_constraintBottom_toTopOf="@+id/appCompatImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/appCompatImageView" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/appCompatImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/my_dictionary_icon"
