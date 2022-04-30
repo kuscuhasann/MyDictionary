@@ -16,6 +16,7 @@ import com.pakt_games.mydictionary.di.myDictionaryViewModel
 import com.pakt_games.mydictionary.ui.recyclerviewitems.MyDictionaryAdapter
 import com.pakt_games.mydictionary.ui.viewmodel.MyDictionaryViewModel
 import com.pakt_games.mydictionary.util.showToast
+import kotlinx.coroutines.flow.collect
 import org.koin.android.ext.koin.androidContext
 import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.context.startKoin
@@ -58,10 +59,12 @@ class MyDictionaryFragment : BaseFragment<MyDictionaryViewModel, FragmentMyDicti
 
     private fun bindRecyclerViewAndDatabase() {
         viewModel.getWordsDataInSQL()
-        viewModel.readAllDataDB.observe(this) {
-            dataBinding.recyclerViewMyDictionaryWords.adapter = MyDictionaryAdapter(it)
-            with(dataBinding) {
-                executePendingBindings()
+        lifecycleScope.launchWhenStarted {
+            viewModel.readAllDataDB.collect {
+                dataBinding.recyclerViewMyDictionaryWords.adapter = MyDictionaryAdapter(it)
+                with(dataBinding) {
+                    executePendingBindings()
+                }
             }
         }
 

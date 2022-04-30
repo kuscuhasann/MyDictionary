@@ -6,11 +6,12 @@ import androidx.lifecycle.viewModelScope
 import com.pakt_games.mydictionary.db.DictionaryWords
 import com.pakt_games.mydictionary.repo.MyDictionaryRepository
 import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
 
 class MyDictionaryViewModel(private val myDictionaryRepository: MyDictionaryRepository): ViewModel() {
 
-    var readAllDataDB = MutableLiveData<List<DictionaryWords>>()
+    var readAllDataDB = MutableStateFlow<List<DictionaryWords>>(listOf())
 
     fun getWordsDataInSQL() {
         viewModelScope.launch {
