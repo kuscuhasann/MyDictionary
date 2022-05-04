@@ -45,7 +45,7 @@
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/editTextValue"
-            android:layout_width="@dimen/two_hundred_fifty_point"
+            android:layout_width="@dimen/three_hundred_point"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/eight_point"
             android:layout_marginBottom="@dimen/twenty_one_point"
@@ -59,11 +59,12 @@
             android:textSize="@dimen/nineteen_text_size"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@+id/appCompatButtonAddWord"
-            app:layout_constraintStart_toStartOf="parent" />
+            app:layout_constraintStart_toStartOf="parent"
+            />
 
         <androidx.appcompat.widget.AppCompatEditText
             android:id="@+id/editTextKey"
-            android:layout_width="@dimen/two_hundred_fifty_point"
+            android:layout_width="@dimen/three_hundred_point"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/eight_point"
             android:background="@drawable/edt_background"

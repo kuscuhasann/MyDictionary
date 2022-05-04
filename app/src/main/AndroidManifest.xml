@@ -10,6 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Light">
         <activity
+            android:windowSoftInputMode="adjustResize"
             android:name=".HomeActivity"
             android:exported="false" />
         <activity

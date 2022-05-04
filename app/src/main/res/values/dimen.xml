@@ -12,8 +12,8 @@
     <dimen name="twenty_five_point">25dp</dimen>
     <dimen name="fifty_five_point">55dp</dimen>
     <dimen name="two_hundred_eighteen_point">218dp</dimen>
-    <dimen name="two_hundred_fifty_point">250dp</dimen>
     <dimen name="two_hundred_fifty_one_point">251dp</dimen>
+    <dimen name="three_hundred_point">300dp</dimen>
 
     <!-- Text Size -->
     <dimen name="twenty_three_text_size">23sp</dimen>
