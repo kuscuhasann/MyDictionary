@@ -1,6 +1,5 @@
 package com.pakt_games.mydictionary.ui.viewmodel
 
-import app.cash.turbine.test
 import com.google.common.truth.Truth
 import com.pakt_games.mydictionary.base.BaseTest
 import com.pakt_games.mydictionary.db.DictionaryWords
@@ -8,7 +7,6 @@ import com.pakt_games.mydictionary.repo.MyDictionaryRepository
 import io.mockk.coEvery
 import io.mockk.mockk
 import kotlinx.coroutines.ExperimentalCoroutinesApi
-import kotlinx.coroutines.flow.flowOf
 import kotlinx.coroutines.test.runBlockingTest
 import org.junit.Test
 import kotlin.time.ExperimentalTime
